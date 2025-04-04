@@ -1,0 +1,64 @@
+/* src/components/Footer/Footer.css */
+.app-footer {
+  /* REMOVE position: fixed, bottom, left, z-index */
+  /* REMOVE margin-top: auto; */
+  width: 100%;
+  padding: 15px 25px;
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0; /* KEY: Prevent footer from shrinking */
+  /* You might want to define a fixed height */
+  /* height: var(--footer-height); */
+  /* box-sizing: border-box; */ /* Include padding in height if set */
+}
+
+/* --- Keep the rest of your Footer.css styles (p, .social-links, .connect-text, media queries) --- */
+.app-footer p {
+    margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.social-links a {
+  color: var(--text-color-secondary);
+  font-size: 1.4rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.connect-text {
+    font-size: 0.75rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .app-footer {
+      padding: 10px 15px;
+      gap: 5px;
+  }
+   .social-links a {
+      font-size: 1.3rem;
+   }
+   .connect-text {
+       font-size: 0.7rem;
+   }
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

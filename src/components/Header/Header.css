@@ -1,0 +1,86 @@
+/* src/components/Header/Header.css */
+.app-header {
+    width: 100%;
+    padding: 15px 0; /* Vertical padding */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Default text-align for the container */
+    text-align: center;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    /* Add position relative IF fireworks need to be contained relative to header, otherwise optional */
+    /* position: relative; */
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    box-sizing: border-box;
+    /* Allow h1 to span width */
+    width: 100%;
+    /* Add some default horizontal padding for general spacing */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Safety for long titles */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Default alignment inherits 'center' from .app-header or can be set explicitly */
+    text-align: center; /* Explicitly center by default */
+}
+.app-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    box-sizing: border-box;
+    /* Allow h1 to span width */
+    width: 100%;
+    /* Add some default horizontal padding for general spacing */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Safety for long titles */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Default alignment inherits 'center' from .app-header or can be set explicitly */
+    text-align: center; /* Explicitly center by default */
+}
+
+/* --- Media Queries for Responsive Alignment --- */
+
+@media (max-width: 768px) { /* Tablets and below */
+    .app-header h1 {
+        font-size: 1.5rem;
+        text-align: left; /* KEY: Align text to the left */
+        padding-left: 20px; /* Standard padding from left edge */
+        /* Keep right padding to avoid buttons (adjust value as needed) */
+        padding-right: 160px;
+    }
+    .app-header h2 {
+        font-size: 1rem;
+        text-align: left; /* KEY: Align text to the left */
+        padding-left: 20px; /* Standard padding from left edge */
+        /* Keep right padding to avoid buttons (adjust value as needed) */
+        padding-right: 160px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+    .app-header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .app-header h1 {
+        font-size: 1.3rem;
+        /* text-align: left; is inherited from 768px query */
+        padding-left: 15px; /* Slightly less padding on mobile */
+        /* Adjust right padding if button layout changes significantly */
+        padding-right: 140px;
+    }
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

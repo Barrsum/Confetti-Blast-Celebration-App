@@ -1,0 +1,143 @@
+/* src/index.css */
+
+/* --- Keep your existing :root and [data-theme="light"] variables --- */
+:root {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #ff6b6b;
+  --firework-base-color: #ff9f43;
+  --firework-burst-color: #ff6b6b;
+  --transition-speed: 0.3s;
+  --primary-color: var(--accent-color);
+  --secondary-color: #2a2a2a;
+  --border-color: #444;
+  --text-color-secondary: #cccccc;
+
+  /* Define expected heights (adjust if needed, or remove if truly dynamic) */
+  /* --header-height: 60px; */
+  /* --footer-height: 75px; */
+}
+
+[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --text-color: #1a1a1a;
+  --accent-color: #4ecdc4;
+  --firework-base-color: #4ecdc4;
+  --firework-burst-color: #ff6b6b;
+  --primary-color: var(--accent-color);
+  --secondary-color: #e0e0e0;
+  --border-color: #ccc;
+  --text-color-secondary: #555555;
+  /* --header-height: 60px; */
+  /* --footer-height: 75px; */
+}
+
+/* --- Core Layout Adjustments --- */
+html, body, #root {
+  height: 100%; /* Make sure all containers can use full height */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* KEY: Prevent ALL scrolling on the page */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex; /* Use flexbox for overall structure */
+  flex-direction: column; /* Stack children vertically */
+}
+
+#root { /* Target the div React mounts into */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow the root div itself to grow */
+  min-height: 0; /* Fix potential flexbox shrinking issues */
+}
+
+/* --- Main Content Area Styling --- */
+.app-container { /* This is the <main> element in App.jsx */
+  flex-grow: 1; /* KEY: Make this container take ALL available space */
+  display: flex; /* Use flexbox to center its content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* Keep for potential absolute positioning inside (like fireworks maybe) */
+  overflow: hidden; /* Hide any overflow within the main area too */
+  min-height: 0; /* Fix potential flexbox shrinking issues */
+  /* No padding needed here anymore as Header/Footer are part of the flex flow */
+}
+
+/* --- Keep Base Button Styles --- */
+button {
+cursor: pointer;
+padding: 10px 15px;
+border: none;
+border-radius: 8px;
+font-size: 1rem;
+transition: transform var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+}
+button:hover {
+ opacity: 0.9;
+ transform: scale(1.05);
+}
+
+/* --- Keep Firework Styles (ensure they are positioned relative to body or app-container) --- */
+.firework-particle {
+  position: absolute;
+  /* Adjust 'bottom' if needed, maybe relative to .app-container instead of body */
+  bottom: 0;
+  width: 4px;
+  height: 15px;
+  background: var(--firework-base-color);
+  border-radius: 2px;
+  animation: launch 1s ease-out forwards;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes launch {
+  0% { transform: translateY(0); opacity: 1; }
+  /* Adjust target Y based on where it looks best in the fixed layout */
+  100% { transform: translateY(-85vh); opacity: 0; }
+}
+
+.firework-burst {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: burst 0.8s ease-out forwards;
+  z-index: 0;
+  pointer-events: none;
+  /* Top/Left set by JS */
+}
+
+@keyframes burst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(8); opacity: 0; }
+}
+
+.utility-buttons-container {
+  position: fixed; /* Container is fixed */
+  top: 15px;
+  right: 15px;
+  display: flex; /* Arrange buttons side-by-side by default */
+  gap: 10px; /* Space between buttons */
+  z-index: 20; /* Ensure it's above other content */
+  align-items: center; /* Align items vertically */
+}
+
+/* --- Media Query for small screens --- */
+@media (max-width: 480px) {
+  .utility-buttons-container {
+      top: 10px;
+      right: 10px;
+      /* Optional: Stack them if needed, though side-by-side might still fit */
+      /* flex-direction: column; */
+      /* align-items: flex-end; */ /* Align to the right if stacked */
+      gap: 8px;
+  }
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

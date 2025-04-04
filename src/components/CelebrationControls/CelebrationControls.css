@@ -1,0 +1,48 @@
+/* src/components/CelebrationControls/CelebrationControls.css */
+.celebration-area {
+    display: flex; /* Center button */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Take up space */
+    padding: 20px; /* Add some padding */
+}
+
+.trigger-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color var(--transition-speed), color var(--transition-speed);
+    position: relative; /* Keep for potential future use */
+    z-index: 2; /* Above fireworks */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.trigger-button:hover {
+    transform: translateY(-3px) scale(1.03); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+ .trigger-button:active {
+    transform: translateY(-1px) scale(1);
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+ }
+
+@media (max-width: 768px) {
+    .trigger-button {
+        padding: 18px 35px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trigger-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

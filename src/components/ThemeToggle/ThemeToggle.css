@@ -1,0 +1,26 @@
+/* src/components/ThemeToggle/ThemeToggle.css */
+.theme-toggle {
+    /* REMOVE: position, top, right, z-index */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+    /* No position: fixed needed here anymore */
+  }
+  
+  .theme-toggle:hover {
+     transform: scale(1.1);
+  }
+  
+   @media (max-width: 480px) {
+      .theme-toggle {
+          /* Adjust padding/font size if needed for mobile */
+          padding: 8px 12px;
+          font-size: 0.8rem;
+      }
+   }
+
+   /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */

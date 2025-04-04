@@ -1,0 +1,28 @@
+/* src/components/MuteButton/MuteButton.css */
+.mute-toggle {
+    /* REMOVE: position, top, right, z-index */
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+    /* No position: fixed needed here anymore */
+  }
+  
+   .mute-toggle:hover {
+      transform: scale(1.1);
+   }
+  
+  @media (max-width: 480px) {
+      .mute-toggle {
+          /* Adjust padding/font size if needed for mobile */
+          padding: 8px 10px;
+          font-size: 1rem;
+      }
+   }
+
+   /* Created by Ram Bapat, www.linkedin.com/in/ram-bapat-barrsum-diamos */
