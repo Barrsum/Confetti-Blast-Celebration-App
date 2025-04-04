@@ -27,7 +27,7 @@ The application also includes:
 *   **Fixed Layout:** The header and footer remain fixed, while the main content area is centered vertically and horizontally with no page scrolling.
 *   **Responsive Design:** Adapts cleanly to different screen sizes, adjusting button positions and header text alignment on mobile.
 
-This project was developed as Day [4](Link) of the **#30DaysOfVibeCoding** challenge (April 2025), leveraging AI assistance for brainstorming, code generation, debugging, and refinement, following the principles of **#VibeCoding**.
+This project was developed as Day [4](https://www.linkedin.com/posts/ram-bapat-barrsum-diamos_30daysofvibecoding-vibecoding-30daysofcoding-activity-7313801785062699008-_evg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEokGUcBG1WEFP4A_IMlyO4LNl-eu2MD52w) of the **#30DaysOfVibeCoding** challenge (April 2025), leveraging AI assistance for brainstorming, code generation, debugging, and refinement, following the principles of **#VibeCoding**.
 
 ## Features
 
