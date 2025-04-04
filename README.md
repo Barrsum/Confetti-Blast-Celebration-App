@@ -1,6 +1,6 @@
 # Confetti Blast Celebration App (React + Vite) 🎉💥🔊
 
-## Try live demo - [Demo](PLACEHOLDER_LINK_TO_YOUR_VERCEL_DEPLOYMENT_HERE)
+## Try live demo - [Demo](https://confetti-blast-celebration-app.vercel.app/)
 
 A fun, interactive web application built with React and Vite that triggers confetti, CSS fireworks, and sound effects on button click. Features dark/light theme toggling and a mute option. Developed as part of the #30DaysOfVibeCoding challenge using AI assistance.
 
