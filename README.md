@@ -7,7 +7,9 @@ A fun, interactive web application built with React and Vite that triggers confe
 <!-- ================================================== -->
 
 ![Confetti App Screenshot - 1](public/homepage-01.png) 
+
 ![Confetti App Screenshot - 2](public/homepage-02.png) 
+
 ![Confetti App Screenshot - 3](public/homepage-03.png)
 
 <!-- ================================================== -->
